@@ -1,8 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
+
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+import { Provider } from 'react-redux';
+
 import App from './components/App';
+import rootReducer from './reducers';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import "./index.css";
 
+const compose = composeWithDevTools({trace:true})
+
+const store = createStore(rootReducer, {}, compose(applyMiddleware()));
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>, 
+    document.getElementById("root")
+);
