@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
-
+import { createPost } from "../actions";
 import { Field, reduxForm, formValueSelector } from "redux-form";
 class PostsNew extends Component {
     renderTitleField(field){
@@ -73,7 +73,10 @@ class PostsNew extends Component {
     }
     
     onSubmit(values) {
-        console.log(values);
+        this.props.createPost(values, () => {
+            // user is redirected to the '/' route
+            this.props.history.push('/');
+        });
     }
 
     render() {
@@ -153,6 +156,6 @@ PostsNew = connect(state => {
     hasRefsValue,
     refsValue
   }
-})(PostsNew);
+}, {createPost} )(PostsNew);
     
 export default PostsNew;    
