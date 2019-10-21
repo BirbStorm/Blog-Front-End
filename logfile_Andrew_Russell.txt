@@ -1,0 +1,59 @@
+commit 99864f7de448b0488ee0d2c57dfd794905940c00
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 21 17:06:27 2019 -0400
+
+    3.5 completed posts to DB and routes back to homepage when new post is added
+
+commit bc1157586d997480427a726b77af0e2d22db608b
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 21 17:01:16 2019 -0400
+
+    3.4 completed add new posts
+
+commit f46665d4807edad2e02ddd29fd7dba6fcd4259b4
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 14 18:13:44 2019 -0400
+
+    finished up to 3.4.4
+
+commit e9fd7c48287a797205c83fde34edd51a9203ff73
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 14 18:03:01 2019 -0400
+
+    added new posts_index component section 3.3
+
+commit 7e9397cbfe3904307294b6f3d44afe01052169b0
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 14 17:59:21 2019 -0400
+
+    able to access my server and view posts section 2 completed
+
+commit f50ed2001ea9e1df43d22e4b2f8b7707e28d429a
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 14 17:51:35 2019 -0400
+
+    created components and added a router section 2.1
+
+commit 3962d065928f4c97f45abc5af30b120a5d42a07a
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 14 17:26:46 2019 -0400
+
+    completed section 0
+
+commit 64ab262f320b343f2951e6d6ae245b0e83d84301
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 14 17:23:01 2019 -0400
+
+    created reducer and component folder and installed redux
+
+commit f4a774e3805997909a1b750d2ee1ff12633078de
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 14 17:19:50 2019 -0400
+
+    installed boostrap and staarted new app
+
+commit 81bcb81fe39ec5e4caf941629a58d30b7331c56c
+Author: Andy <russellandy98@gmail.com>
+Date:   Mon Oct 14 17:15:39 2019 -0400
+
+    Initial commit from Create React App
