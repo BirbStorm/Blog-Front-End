@@ -35,7 +35,12 @@ class PostsShow extends Component {
                 >
                     Delete Post
                 </button>
-
+                <button
+                className="btn float-left"
+                onClick={this.onDeleteClick.bind(this)}
+                >
+                    Edit Post
+                </button>
                 <div className="container">
                     <div className="row">
                         <div className="col-2"><h5>Title</h5></div>

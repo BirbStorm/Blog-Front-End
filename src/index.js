@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 import PostsIndex from './containers/posts_index';
 import PostsNew from "./containers/posts_new";
 import PostsShow from "./containers/posts_show";
-
+import PostsEdit from  './containers/posts_show';
 
 import rootReducer from './reducers';
 import ReduxPromise from 'redux-promise';
@@ -28,6 +28,7 @@ ReactDOM.render(
                 <Switch>
                     <Route path="/api/posts/new" component={PostsNew} />
                     <Route path="/api/posts/:id" component={PostsShow} />
+                    <Route path="/api/posts/:id/edit" component={PostsEdit} />
                     <Route exact path='/' component={PostsIndex}/>
                     <Route path="/api/posts" component={PostsIndex} />
                 </Switch>
