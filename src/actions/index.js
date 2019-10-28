@@ -50,8 +50,11 @@ export function deletePost(id, callback) {
 }
 
 export function updatePost(id, callback){
+    const request = axios
+        .put(`${ROOT_URL}/posts/${id}`)
+        .then(() => callback());
     return {
         type: UPDATE_POST,
-        payload: id
+        payload: request
     }
 }

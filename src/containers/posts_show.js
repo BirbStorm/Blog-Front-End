@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchPost, deletePost } from "../actions";
+import { fetchPost, deletePost, updatePost } from "../actions";
 
 class PostsShow extends Component {
     componentDidMount() {
@@ -12,6 +12,12 @@ class PostsShow extends Component {
         const { id } = this.props.match.params;
         this.props.deletePost(id, ()=>{
             this.props.history.push('/');
+        });
+    }
+    onEditClick(){
+        const { id } = this.props.match.params;
+        this.props.updatePost(id, ()=>{
+            this.props.history.push(`/api/posts/:${id}/edit`);
         });
     }
     render(){
@@ -36,8 +42,8 @@ class PostsShow extends Component {
                     Delete Post
                 </button>
                 <button
-                className="btn float-left"
-                onClick={this.onDeleteClick.bind(this)}
+                className="btn btn-warning float-right"
+                onClick={this.onEditClick.bind(this)}
                 >
                     Edit Post
                 </button>
@@ -73,5 +79,5 @@ function mapStateToProps({ posts }, ownProps) {
 
 export default connect(
     mapStateToProps,
-    { fetchPost, deletePost }
+    { fetchPost, deletePost, updatePost }
 )(PostsShow);

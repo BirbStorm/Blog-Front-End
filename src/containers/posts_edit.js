@@ -144,12 +144,20 @@ PostsEdit = reduxForm({
 const selector = formValueSelector('PostsEditForm');
 
 PostsEdit = connect((state, ownProps) => {
-
-    // pull initial values from state "posts"
-  const initialValues = state.posts[ownProps.match.params.id] 
+    const title = selector(state, 'title')
+    const category = selector(state, 'category')
+    const content = selector(state, 'content')
+    const hasRefsValue = selector(state, 'hasReferences')
+    const refsValue = selector(state, 'references')
+        // pull initial values from state "posts"
+    const initialValues = state.posts[ownProps.match.params.id] 
 
   return{
-
+    title,
+    category,
+    content,
+    hasRefsValue,
+    refsValue,
     initialValues
   }
 
