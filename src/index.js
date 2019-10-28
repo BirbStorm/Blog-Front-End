@@ -10,6 +10,7 @@ import { Provider } from 'react-redux';
 //import App from './components/App';
 import PostsIndex from './containers/posts_index';
 import PostsNew from "./containers/posts_new";
+import PostsShow from "./containers/posts_show";
 
 
 import rootReducer from './reducers';
@@ -26,6 +27,7 @@ ReactDOM.render(
             <div>
                 <Switch>
                     <Route path="/api/posts/new" component={PostsNew} />
+                    <Route path="/api/posts/:id" component={PostsShow} />
                     <Route exact path='/' component={PostsIndex}/>
                     <Route path="/api/posts" component={PostsIndex} />
                 </Switch>
