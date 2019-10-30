@@ -85,8 +85,7 @@ class PostsNew extends Component {
             <div className="container">
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <Field name="title" component={this.renderTitleField} />
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                    <Link to="/" className="btn btn-primary">Cancel</Link>
+                    
                     <Field
                         name="category"
                         component={this.renderCategoryField}
@@ -112,6 +111,9 @@ class PostsNew extends Component {
                             component={this.renderReferencesField}
                         />
                     )}
+    
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <Link to="/" className="btn btn-primary">Cancel</Link>
                 </form>
             </div>
         );

@@ -8,7 +8,7 @@ import { Field, reduxForm, formValueSelector } from "redux-form";
 class PostsEdit extends Component {
     renderTitleField(field){
         const className = `form-control ${field.meta.touched && field.meta.error ? 'is-invalid' : ''}`
-
+        console.log(this.state.initialValues)
         return(
             <div className="form-group">
                 <label>Title</label>
@@ -16,7 +16,7 @@ class PostsEdit extends Component {
                     {...field.input}
                     className={className}
                     type="text"
-                />
+                >Test</input>
                 <div className="invalid-feedback">
                     {field.meta.touched ? field.meta.error : ''}
                 </div>

@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 import PostsIndex from './containers/posts_index';
 import PostsNew from "./containers/posts_new";
 import PostsShow from "./containers/posts_show";
-import PostsEdit from  './containers/posts_show';
+import PostsEdit from  './containers/posts_edit';
 
 import rootReducer from './reducers';
 import ReduxPromise from 'redux-promise';

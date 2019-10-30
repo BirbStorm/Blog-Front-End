@@ -16,9 +16,10 @@ class PostsShow extends Component {
     }
     onEditClick(){
         const { id } = this.props.match.params;
-        this.props.updatePost(id, ()=>{
-            this.props.history.push(`/api/posts/:${id}/edit`);
-        });
+        console.log(id)
+        // this.props.updatePost(id, ()=>{
+        //     this.props.history.push(`/api/posts/${id}/edit`);
+        // });
     }
     render(){
         const { post } = this.props;
@@ -41,12 +42,12 @@ class PostsShow extends Component {
                 >
                     Delete Post
                 </button>
-                <button
+                <Link
                 className="btn btn-warning float-right"
-                onClick={this.onEditClick.bind(this)}
+                to={`/api/posts/${this.props.match.params}/edit`}
                 >
                     Edit Post
-                </button>
+                </Link>
                 <div className="container">
                     <div className="row">
                         <div className="col-2"><h5>Title</h5></div>

@@ -49,7 +49,9 @@ export function deletePost(id, callback) {
     };
 }
 
-export function updatePost(id, callback){
+export function updatePost(id, values, callback){
+    if (!values.hasReferences || values.hasReferences===false)
+        values =  _.omit(values, "references" );
     const request = axios
         .put(`${ROOT_URL}/posts/${id}`)
         .then(() => callback());
