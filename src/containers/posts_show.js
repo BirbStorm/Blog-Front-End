@@ -14,13 +14,7 @@ class PostsShow extends Component {
             this.props.history.push('/');
         });
     }
-    onEditClick(){
-        const { id } = this.props.match.params;
-        console.log(id)
-        // this.props.updatePost(id, ()=>{
-        //     this.props.history.push(`/api/posts/${id}/edit`);
-        // });
-    }
+    
     render(){
         const { post } = this.props;
 
@@ -44,7 +38,7 @@ class PostsShow extends Component {
                 </button>
                 <Link
                 className="btn btn-warning float-right"
-                to={`/api/posts/${this.props.match.params}/edit`}
+                to={`/api/posts/edit/${post._id}`}
                 >
                     Edit Post
                 </Link>

@@ -86,10 +86,9 @@ class PostsEdit extends Component {
         return (
             <div className="container">
                 <p>{this.state.initialValues}</p>
-                {<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+                <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <Field name="title" component={this.renderTitleField} />
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                    <Link to="/" className="btn btn-primary">Cancel</Link>
+                    
                     <Field
                         name="category"
                         component={this.renderCategoryField}
@@ -115,7 +114,11 @@ class PostsEdit extends Component {
                             component={this.renderReferencesField}
                         />
                     )}
-                </form>}
+                    
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <Link to="/" className="btn btn-primary">Cancel</Link>
+
+                </form>
             </div>
         );
     }
