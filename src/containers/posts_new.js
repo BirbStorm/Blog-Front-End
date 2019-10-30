@@ -91,7 +91,7 @@ class PostsNew extends Component {
                         component={this.renderCategoryField}
                     />
 
-                    <Field name="content" component={this.renderContentField} />
+                    <Field name="content" component={this.renderContentField}/>
 
                     <div>
                         <label htmlFor="hasReferences">Has References?</label>
