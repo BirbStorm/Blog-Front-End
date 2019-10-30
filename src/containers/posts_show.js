@@ -38,7 +38,7 @@ class PostsShow extends Component {
                 </button>
                 <Link
                 className="btn btn-warning float-right"
-                to={`/api/posts/edit/${post._id}`}
+                to={`/api/posts/${post._id}/edit`}
                 >
                     Edit Post
                 </Link>

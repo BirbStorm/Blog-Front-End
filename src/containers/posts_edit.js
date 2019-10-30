@@ -74,7 +74,7 @@ class PostsEdit extends Component {
     }
     
     onSubmit(values) {
-        this.props.createPost(values, () => {
+        this.props.updatePost(this.props.initialValues._id,values, () => {
             // user is redirected to the '/' route
             this.props.history.push('/');
         });
@@ -84,7 +84,6 @@ class PostsEdit extends Component {
         const { handleSubmit } = this.props;
         return (
             <div className="container">
-                <p>{this.props.initialValues}</p>
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <Field name="title" component={this.renderTitleField} />
                     

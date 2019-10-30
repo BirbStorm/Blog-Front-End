@@ -39,7 +39,7 @@ export function fetchPost(id) {
 }
 
 export function deletePost(id, callback) {
-    
+
     axios.delete(`${ROOT_URL}/posts/${id}`).then(() => callback());
 
     return {
@@ -51,11 +51,11 @@ export function deletePost(id, callback) {
 export function updatePost(id, values, callback){
     if (!values.hasReferences || values.hasReferences===false)
         values =  _.omit(values, "references" );
-    // const request = axios
-    //     .put(`${ROOT_URL}/posts/${id}`)
-    //     .then(() => callback());
+    const request = axios
+        .put(`${ROOT_URL}/posts/${id}`, values)
+        .then(() => callback());
     return {
         type: UPDATE_POST,
-        payload: id
+        payload: request
     }
 }
